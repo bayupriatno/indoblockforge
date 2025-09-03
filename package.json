@@ -1,0 +1,25 @@
+{
+  "name": "indoblockforge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "IndoBlockforge: Platform Blockchain untuk Semua IndoBlockforge adalah platform all-in-one yang menyederhanakan pengembangan blockchain untuk pengembang dan bisnis. Misi kami adalah untuk mendemokratisasi akses ke teknologi blockchain dengan menyediakan alat yang intuitif dan mudah digunakan untuk membuat, mengelola, dan meluncurkan kontrak pintar tanpa kerumitan.",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "workspaces": [
+    "apps/*",
+    "contracts",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.9"
+  },
+  "packageManager": "npm@10.8.1"
+}

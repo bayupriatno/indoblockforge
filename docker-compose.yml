@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  # Example: A local database service (PostgreSQL)
+  db:
+    image: postgres:14
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: indoblockforge
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  # Example: A local blockchain node (Hardhat or Ganache)
+  hardhat:
+    image: node:18
+    working_dir: /app/contracts
+    command: npx hardhat node
+    volumes:
+      - ./contracts:/app/contracts
+    ports:
+      - "8545:8545"
+
+volumes:
+  db-data:

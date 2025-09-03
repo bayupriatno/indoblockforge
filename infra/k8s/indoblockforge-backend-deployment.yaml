@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: indoblockforge-backend
+  labels:
+    app: indoblockforge-backend
+spec:
+  replicas: 2  # Menjalankan 2 instance dari aplikasi backend
+  selector:
+    matchLabels:
+      app: indoblockforge-backend
+  template:
+    metadata:
+      labels:
+        app: indoblockforge-backend
+    spec:
+      containers:
+      - name: backend
+        image: your-docker-registry/indoblockforge-backend:latest  # Ganti dengan path image Docker Anda
+        ports:
+        - containerPort: 3001
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: indoblockforge-secrets
+              key: DATABASE_URL
+        - name: JWT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: indoblockforge-secrets
+              key: JWT_SECRET
+        - name: WALLET_PRIVATE_KEY
+          valueFrom:
+            secretKeyRef:
+              name: indoblockforge-secrets
+              key: WALLET_PRIVATE_KEY
+        - name: ETHEREUM_RPC_URL
+          value: "http://ethereum-node-service:8545" # Alamat internal service node Ethereum
+        - name: POLYGON_RPC_URL
+          value: "https://rpc-mumbai.maticvigil.com"

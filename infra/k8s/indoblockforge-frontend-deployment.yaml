@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: indoblockforge-frontend
+  labels:
+    app: indoblockforge-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: indoblockforge-frontend
+  template:
+    metadata:
+      labels:
+        app: indoblockforge-frontend
+    spec:
+      containers:
+      - name: frontend
+        image: your-docker-registry/indoblockforge-frontend:latest # Ganti dengan path image Docker Anda
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NEXTAUTH_URL
+          value: "http://your-domain.com" # Ganti dengan domain Anda
+        - name: NEXTAUTH_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: indoblockforge-secrets
+              key: NEXTAUTH_SECRET
+        - name: NEXT_PUBLIC_API_URL
+          value: "http://indoblockforge-backend-service" # Alamat internal service backend

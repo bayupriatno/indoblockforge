@@ -1,0 +1,57 @@
+# Node.js
+# ========================
+node_modules
+*.log
+npm-debug.log*
+.DS_Store
+
+# IDEs and Editors
+# ========================
+.vscode/
+.idea/
+.env.local
+.env
+*.iml
+
+# Turborepo
+# ========================
+.turbo
+dist
+.next
+out
+
+# Backend
+# ========================
+/apps/backend/dist
+/apps/backend/node_modules
+/apps/backend/logs
+/apps/backend/prisma/generated/
+/apps/backend/prisma/migrations/
+
+# Frontend
+# ========================
+/apps/frontend/dist
+/apps/frontend/.next/
+/apps/frontend/out/
+/apps/frontend/node_modules
+
+# Smart Contracts
+# ========================
+/contracts/artifacts/
+/contracts/cache/
+/contracts/node_modules/
+/contracts/coverage/
+/contracts/coverage.json
+/contracts/typechain-types/
+
+# Package Utilities
+# ========================
+/packages/sdk-js/dist/
+/packages/sdk-js/node_modules/
+/packages/utils/dist/
+/packages/utils/node_modules/
+
+# OS and misc
+# ========================
+*.swp
+*.bak

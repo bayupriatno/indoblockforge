@@ -27,4 +27,4 @@ Ini adalah proyek open-source, dan kami sangat menghargai setiap kontribusi. Bai
  * Laporkan Bug: Jika Anda menemukan masalah, beritahu kami dengan membuat issue.
  * Ajukan Fitur: Punya ide untuk fitur baru? Bagikan di halaman issues.
  * Kontribusi Kode: Ambil issue yang ada atau buat pull request dengan perbaikan dan fitur baru. Kami akan meninjau setiap kontribusi.
-Kami siap mendiskusikan visi kami lebih lanjut dan mendemonstrasikan prototipe kami. Silakan hubungi kami di bayupriatno007@gmail.com atau kunjungi repositori GitHub kami untuk memulai kontribusi.
+Kami siap mendiskusikan visi kami lebih lanjut dan mendemonstrasikan prototipe kami. Silakan hubungi kami di bayupriatno007@gmail.com atau kunjungi discord kami: https://discord.gg/KcWtq28a untuk memulai kontribusi.
